@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: orcamento
+  data:
+    mongodb:
+      uri: mongodb://root:rootpass@localhost:27017/orcamento?authSource=admin
+app:
+  myport: ${PORT:0}
+server:
+  port: ${app.myport}
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true #default
+management:
+  tracing:
+    propagation:
+      type: w3c
+    sampling:
+      probability: 1
+

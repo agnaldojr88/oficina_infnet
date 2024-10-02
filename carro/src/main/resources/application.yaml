@@ -1,0 +1,43 @@
+app:
+  myport: ${PORT:0}
+spring:
+  application:
+    name: carro
+  datasource:
+    url: jdbc:h2:mem:carro
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+server:
+  port: ${app.myport}
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  tracing:
+    propagation:
+      type: w3c
+    sampling:
+      probability: 1
+
+
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      avaliacaoService:
+        register-health-indicator: true
+        minimum-number-of-calls: 1
+        sliding-window-size: 3
+        wait-duration-in-open-state:
+          seconds: 1000

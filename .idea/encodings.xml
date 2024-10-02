@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/carro/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/imposto/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nota-fiscal-worker/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nota-fiscal/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/orcamento/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/peca/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/servico/src/main/java" charset="UTF-8" />
+  </component>
+</project>
